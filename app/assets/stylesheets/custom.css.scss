@@ -23,3 +23,52 @@ $navbar-default-bg: #852A1B;
 .center {
 	text-align: center;
 }
+
+.jumbotron {
+	background-image: asset-url('new_cover_page.jpeg');
+	background-size: cover;
+	height: 550px;
+
+}
+
+.jumbotron h1 {
+	color: #fff;
+	margin-bottom: 25px;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+.btn-xlarge {
+	font-size: 1.7em;
+	background-color: #852A1B;
+	border-color: black;
+}
+
+.btn-xlarge:hover {
+	background-color: green;
+}
+
+footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+
+}
+
+footer a:hover {
+	color:#222;
+}
+
+footer small {
+	float: left;
+}
+
+footer ul {
+	float: right;
+	list-style: none;
+}
+
+footer ul li {
+	float: left;
+	margin-left: 5px;
+}
