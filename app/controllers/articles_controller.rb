@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def edit
-		redirect_to edit_article(article_params)
+		
 	end
 
 	def create
@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
 
 		# method article_params for accessing the given params
 		@article = Article.new(article_params)
-		# @article.user = User.first
+		@article.user = User.first
 
 		if @article.save
 			flash[:success] = "Article was successfully created"
