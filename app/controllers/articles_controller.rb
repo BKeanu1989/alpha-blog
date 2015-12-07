@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
 			render 'edit'
 		end
 	end
-
+	
 
 	def show
 		
