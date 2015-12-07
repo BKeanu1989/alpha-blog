@@ -1,5 +1,11 @@
 <h1 class="center" >Showing all articles</h1>
+<div class="center">
+	<%= will_paginate @articles %>
+</div>
+	
+<%= render 'article', obj:@articles %>
 
-	
-	
-<%= render 'article', obj:@article %>
+<div class="center">
+	<%= will_paginate @articles %>
+</div>
+
