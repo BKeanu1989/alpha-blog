@@ -6,6 +6,10 @@ $navbar-default-bg: #852A1B;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.split {
+	margin-top: 50px;
+}
+
 #logo {
 	float:left;
 	font-size: 1.7em;

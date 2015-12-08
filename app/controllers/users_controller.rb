@@ -1,6 +1,6 @@
 class UsersController < ApplicationController 
 	before_action :set_user, only: [:edit, :update, :show]
-
+	before_action :require_account_owner, only: [:edit, :update]
 
 	def index
 		
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user_articles = @user.articles.paginate(page: 	params[:page], per_page: 2)
+		@user_articles = @user.articles.paginate(page: params[:page], per_page: 2)
 	end
 
 
@@ -49,6 +49,13 @@ class UsersController < ApplicationController
 
 	def set_user 
 		@user = User.find(params[:id])
+	end
+
+	def require_account_owner
+		if current_user != @user
+			flash[:danger] = "You can only edit your own account"
+			redirect_to root_path
+		end
 	end
 
 
