@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
 
 		# method article_params for accessing the given params
 		@article = Article.new(article_params)
+		@article.user = current_user
 		# @article.user = User.first
 
 		if @article.save
