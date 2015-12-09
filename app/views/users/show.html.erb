@@ -10,8 +10,9 @@
 <div class="center">
 	<%= will_paginate @user_articles %>
 </div>
-<% # obj: @user.articles ist gleich @user_articles %>
-<%= render 'articles/article', obj: @user.articles %>
+<% # obj: @user.articles ist gleich @user_articles 
+# not true, @user_articles definiert in users_controller action show%>
+<%= render 'articles/article', obj: @user_articles %>
 <div class="center">
 	<%= will_paginate @user_articles %>
 </div>
