@@ -10,7 +10,7 @@
 <div class="center">
 	<%= will_paginate @user_articles %>
 </div>
-<% # obj: @user.articles == @user.articles %>
+<% # obj: @user.articles ist gleich @user_articles %>
 <%= render 'articles/article', obj: @user.articles %>
 <div class="center">
 	<%= will_paginate @user_articles %>
